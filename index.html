@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce El Roi, una cafetería ficticia creada como proyecto universitario.">
+  <title>El Roi | Un lugar para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- BARRA SUPERIOR: permanece visible al desplazarse. -->
+  <header class="cabecera">
+    <div class="contenedor cabecera-interior">
+      <!-- El nombre en texto se puede sustituir por el logo cuando esté listo. -->
+      <a class="marca" href="#inicio" aria-label="El Roi, inicio">
+  <img
+    class="logo-navbar"
+    src="./assets/img/Logo.svg"
+    alt="El Roi, cafetería"
+  >
+</a>
+      <button class="menu-toggle" type="button" aria-controls="navegacion" aria-expanded="false" hidden>
+        <span class="menu-icono" aria-hidden="true"><span></span><span></span></span>
+        <span class="menu-texto">Menú</span>
+      </button>
+      <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Home</a>
+        <a href="#porque">¿Por qué visitarnos?</a>
+        <a href="#menu">Menú</a>
+        <a href="#historia">Nuestra Historia</a>
+        <a class="nav-destacado" href="#ubicacion">¡Visítanos!</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- 1. HERO: la imagen de fondo se cambia en --foto-portada, en estilos.css. -->
+    <section id="inicio" class="portada" aria-labelledby="titulo-inicio">
+      <div class="contenedor portada-interior">
+        <div class="portada-copy">
+          <p class="etiqueta">BIENVENIDO A EL ROI</p>
+          <h1 id="titulo-inicio">Un café. Una pausa.<br><em>Un lugar para ti.</em></h1>
+          <p class="portada-descripcion">Un espacio creado para que trabajes fuera de casa, acompañado de una buena taza de café, y puedas encontrar un momento de calma en medio de la rutina.</p>
+          <div class="acciones">
+            <a class="boton boton-crema" href="#ubicacion">Ven a visitarnos <span aria-hidden="true">📍</span></a>
+            <a class="boton boton-transparente" href="#menu">Explora el menú <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="portada-pie">
+          <span>CONEXIÓN · CALMA · CAFÉ</span>
+          <a href="#porque" aria-label="Descubrir por qué visitarnos"><span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BENEFICIOS: exactamente tres tarjetas; textos provisionales editables. -->
+    <section id="porque" class="seccion beneficios" aria-labelledby="titulo-beneficios">
+      <div class="contenedor">
+        <div class="encabezado-seccion encabezado-centrado">
+          <p class="etiqueta">Si aún dudas...</p>
+          <h2 id="titulo-beneficios">¿Por qué visitarnos?</h2>
+          <p>¡Tenemos todo para que hagas co-working!</p>
+        </div>
+        <div class="beneficios-grid">
+          <article class="beneficio beneficio-crema">
+            <svg class="icono-beneficio" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M17 28h28v10a14 14 0 0 1-28 0V28Zm28 3h4a7 7 0 0 1 0 14h-5M13 53h38M25 20c-6-7 6-8 0-15M36 20c-6-7 6-8 0-15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Café de Especialidad</h3>
+            <p>¿Cocinar? No tienes que detenerte... ¡Nosotros te lo llevamos a la mesa!</p>
+          </article>
+          <article class="beneficio beneficio-oliva">
+            <svg class="icono-beneficio" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="13" stroke="currentColor" stroke-width="2"/><path d="M32 7v6m0 38v6M7 32h6m38 0h6M14 14l5 5m26 26 5 5M14 50l5-5m26-26 5-5M32 24v9l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Adaptabilidad de Horario</h3>
+            <p>¿Trabajas hasta tarde? ¡No te preocupes! Estamos aquí para ti</p>
+          </article>
+          <article class="beneficio beneficio-arena">
+            <svg class="icono-beneficio" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M12 16h33a7 7 0 0 1 7 7v15a7 7 0 0 1-7 7H28L16 54V45h-4a7 7 0 0 1-7-7V23a7 7 0 0 1 7-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18 29h21M18 36h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>¿Reuniones Virtuales?</h3>
+            <p>Contamos con espacios adecuados para que no tengas problema</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MENÚ: se conserva el filtro y los tres productos de la base. -->
+    <section id="menu" class="seccion seccion-menu" aria-labelledby="titulo-menu">
+      <div class="contenedor">
+        <div class="encabezado-menu">
+          <div class="encabezado-seccion">
+            <p class="etiqueta">PENSADO PARA TI</p>
+            <h2 id="titulo-menu">Nuestro menú</h2>
+            <p>Selecciona la categoría que más te guste</p>
+          </div>
+          <div id="controles-filtro" class="filtro" hidden>
+            <label for="categoria">Explora por categoría</label>
+            <select id="categoria">
+              <option value="todos">Todas las categorías</option>
+              <option value="geek">Geek🤓</option>
+              <option value="girly">Girly✨</option>
+              <option value="fitness">Fitness🏋🏻‍♂️</option>
+              <option value="focus">Focus🧠</option>
+            </select>
+            <p id="resultado-filtro" class="estado" role="status"></p>
+          </div>
+        </div>
+        <div class="productos">
+          <article class="producto" data-categoria="girly">
+            <img
+  class="producto-imagen"
+  src="./assets/img/ProductoGirly.webp"
+  alt="Latte frío con espuma rosada de fresa y pétalos de rosa"
+  loading="lazy">
+            <p class="etiqueta">Girly✨</p>
+            <h3>Latte Rosa</h3>
+            <p>Espresso con leche fría y vainilla, coronado con espuma de fresa y delicados pétalos de rosa comestibles. Un pequeño momento para consentirte.</p>
+          </article>
+          <article class="producto" data-categoria="focus">
+            <img
+  class="producto-imagen"
+  src="./assets/img/ProductoFocus.webp"
+  alt="Espresso con crema dorada en una taza pequeña de cerámica"
+  loading="lazy">
+            <p class="etiqueta">Focus🧠</p>
+            <h3>Espresso Focus</h3>
+            <p>Un espresso corto e intenso, con crema dorada y aroma profundo. Una pausa breve, llena de potencia.</p>
+          </article>
+          <article class="producto" data-categoria="fitness">
+            <img
+  class="producto-imagen"
+  src="./assets/img/ProductoFitness.webp"
+  alt="Batido de fresa y banano con proteína whey, servido en vaso de vidrio"
+  loading="lazy">
+            <p class="etiqueta">FITNESS🏋🏻‍♂️</p>
+            <h3>Fresa Activa</h3>
+            <p>Batido de fresas, banano y leche con proteína whey sabor vainilla. Cremoso, refrescante y hecho para acompañar tu ritmo.</p>
+          </article>
+          <article class="producto" data-categoria="geek">
+            <img
+    class="producto-imagen"
+    src="./assets/img/ProductoGeek.webp"
+    alt="Latte servido en una taza de cerámica"
+    loading="lazy">
+            <p class="etiqueta">GEEK🤓</p>
+            <h3>Latte Level 99</h3>
+            <p>Espresso con leche cremosa y un toque de vainilla, coronado con un corazón pixelado de cacao. Una pausa cálida antes de tu próxima aventura.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HISTORIA: se conserva el texto del proyecto encontrado en Descargas. -->
+    <section id="historia" class="seccion historia" aria-labelledby="titulo-historia">
+      <div class="contenedor historia-grid">
+        <div>
+          <h2 id="titulo-historia">Nuestra historia</h2>
+          <p class="etiqueta">UN LUGAR PARA CADA PERSONA</p>
+        </div>
+        <div class="historia-texto">
+          <p class="historia-frase">Sentirse visto.<br><em>Sentirse en casa.</em></p>
+          <!-- EDITAR COPY: historia de El Roi. -->
+          <p>El Roi significa «el Dios que me ve». Ese significado nos inspiró a transmitir en nuestra cafetería una idea: cada persona importa, cada historia tiene valor y todos merecemos encontrar un lugar donde sentirnos acogidos.</p>
+          <p>El Roi nace de la idea de crear un espacio donde el café se convierta en mucho más que una bebida: en una oportunidad para conectar, compartir y disfrutar de las pequeñas cosas de la vida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. UNA UBICACIÓN: fotografía izquierda, contenido derecha. -->
+    <section id="ubicacion" class="seccion ubicacion" aria-labelledby="titulo-ubicacion">
+      <div class="contenedor ubicacion-grid">
+        <figure class="ubicacion-imagen">
+          <!-- FOTO UBICACIÓN: cambia src por ./assets/img/tu-foto.webp y escribe un alt real. -->
+          <img id="foto-ubicacion" src="./assets/img/ubicacion.webp" alt="Fachada de El Roi con toldo oliva y pequeña terraza" width="1000" height="1100" loading="lazy">
+        </figure>
+        <div class="ubicacion-info">
+          <p class="etiqueta">TE ESPERAMOS AQUÍ</p>
+          <h2 id="titulo-ubicacion">Ubicación<br><em>y horario</em></h2>
+          <p>Un lugar para atenderte, conversar y hacer una pausa.</p>
+          <!-- EDITAR DIRECCIÓN: una sola ubicación; los datos siguientes están pendientes. -->
+          <address class="dato-ubicacion">
+            <span class="dato-titulo">Dirección</span>
+            <span>Heredia, Costa Rica.</span>
+          </address>
+          <!-- EDITAR HORARIO: sustituye el texto por un solo horario. -->
+          <div class="dato-ubicacion">
+            <span class="dato-titulo">Horario</span>
+            <p>Lunes - Sábado | 7:00a.m. - 10:00p.m.</p>
+          </div>
+          <!-- WAZE: pega la URL en ENLACES.waze, al principio de js/main.js. -->
+          <a id="enlace-waze" class="boton boton-oliva" role="link" aria-disabled="true" tabindex="-1">Cómo llegar en Waze <span aria-hidden="true">🚘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALERÍA HORIZONTAL: reemplaza cada src y alt por tus fotografías. -->
+    <section id="galeria" class="seccion galeria" aria-labelledby="titulo-galeria">
+      <div class="contenedor">
+        <div class="galeria-encabezado">
+          <div class="encabezado-seccion">
+            <h2 id="titulo-galeria">Conoce nuestro espacio</h2>
+            <p id="ayuda-galeria">Desliza para recorrer la galería o utiliza las flechas.</p>
+          </div>
+          <div class="galeria-controles" hidden>
+            <button class="flecha" id="galeria-anterior" type="button" aria-label="Ver fotografías anteriores" aria-controls="galeria-pista" disabled>←</button>
+            <button class="flecha" id="galeria-siguiente" type="button" aria-label="Ver más fotografías" aria-controls="galeria-pista">→</button>
+          </div>
+        </div>
+        <div id="galeria-pista" class="galeria-pista" role="region" aria-label="Fotografías de la cafetería" aria-describedby="ayuda-galeria" tabindex="0">
+          <figure class="galeria-item">
+            <img src="./assets/img/galeria1.webp" alt="Terraza de El Roi con mesas de madera y toldo oliva" width="800" height="1000" loading="lazy">
+          </figure>
+          <figure class="galeria-item">
+            <img src="./assets/img/galeria3.webp" alt="Interior de El Roi con mesas, asientos oliva y barra al fondo" width="800" height="1000" loading="lazy">
+          </figure>
+          <figure class="galeria-item">
+            <img src="./assets/img/galeria2.webp" alt="Mesas redondas junto a la banqueta oliva de la cafetería" width="800" height="1000" loading="lazy">
+          </figure>
+          <figure class="galeria-item">
+            <img src="./assets/img/galeria4.webp" alt="Rincón de lectura con sillones crema, libros y plantas" width="800" height="1000" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER: agrega las URL de las redes en ENLACES, en js/main.js. -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-superior">
+        <div>
+          <a class="marca marca-clara" href="#inicio" aria-label="El Roi, volver al inicio">
+            <span class="marca-nombre">El Roi<span class="marca-punto" aria-hidden="true">.</span></span>
+            <span class="marca-descriptor">CAFETERÍA</span>
+          </a>
+          <p class="pie-frase">Un café. Una pausa. Un lugar para ti.</p>
+        </div>
+        <nav class="pie-enlaces" aria-label="Enlaces del pie de página">
+          <a href="#menu">Menú</a>
+          <a href="#historia">Nuestra historia</a>
+          <a href="#ubicacion">Ubicación y horario</a>
+        </nav>
+        <div class="pie-social">
+          <p class="etiqueta">¡Síguenos!</p>
+          <div class="redes" aria-label="Redes sociales">
+            <a data-red="instagram" role="link" aria-disabled="true" tabindex="-1">Instagram <span aria-hidden="true">↗</span></a>
+            <a data-red="facebook" role="link" aria-disabled="true" tabindex="-1">Facebook <span aria-hidden="true">↗</span></a>
+            <a data-red="tiktok" role="link" aria-disabled="true" tabindex="-1">TikTok <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="pie-inferior">
+        <p>El Roi 2026 · Cafetería ficticia.</p>
+        <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
